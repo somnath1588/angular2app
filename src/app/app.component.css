@@ -1,0 +1,131 @@
+#header {
+    padding: 0px 0px 20px 0px;
+    position: relative;
+    left: 0;
+    top: 0;
+    right: 0;
+    transition: all 0.5s;
+    z-index: 997;
+    background: #fff !important;
+    min-height: 100px;
+}
+
+#header.header-scrolled {
+    box-shadow: -21.213px 21.213px 30px 0px rgba(158, 158, 158, 0.3);
+    background: rgba(255, 255, 255, 0.9);
+    transition: all 0.5s;
+   
+}
+
+.container {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+
+
+.main-menu {
+    padding-top: 20px;
+}
+
+.align-items-center {
+    align-items: center !important;
+}
+
+#nav-menu-container {
+    float: right;
+    margin: 0px;
+    padding: 0px;
+}
+
+#nav-menu-container  li {
+    margin-left: 10px;
+    float: left;
+    height: 30px;
+    background: orange;
+    margin: 3px;
+    list-style-type: none;
+}
+
+.nav-menu a {
+    padding:8px;
+    text-decoration: none;
+    display: inline-block;
+    color: #222;
+    font-weight: 400;
+    font-size: 12px;
+    text-transform: uppercase;
+    outline: none;
+}
+.nav-menu li a:hover{
+background: green;
+color: white;
+}
+
+.mainArea{
+    min-height: 500px;
+    margin: 1%;
+    padding: 10px;
+    float: left;
+    background:tan;
+    width: 98%;
+    
+}
+
+footer{
+    min-height: auto;
+    margin: 1%;
+    padding: 10px;
+    float: left;
+    background-color: skyblue;
+    width: 98%;
+}
+
+.sliders{
+    width: auto;
+    margin: 0px;
+    padding: 5px;
+   
+    text-align: center;
+}
+
+
+
+ /* ANIMATION */
+ @keyframes one {
+    0%  { opacity: 0; } /* Original Position */
+    50% { opacity: 0.5; }/* Starts moving after 16% to this position */
+    100% { opacity: 1; }
+   
+ }
+ 
+ @keyframes two {
+    0%  { opacity: 0; } /* Original Position */
+    50% { opacity: 0.5; }/* Starts moving after 16% to this position */
+    100% { opacity: 1; }
+   
+ }
+ 
+ @keyframes three {
+    0%  { opacity: 0; } /* Original Position */
+    50% { opacity: 0.5; }/* Starts moving after 16% to this position */
+    100% { opacity: 1; }
+   
+ }
+ 
+ #logo{ 
+    animation: one 3s  ease infinite;
+ }
+
+ #logo{ 
+     animation: two 3s  ease infinite;
+    }
+
+    #logo{ 
+        animation: three 3s ease infinite;
+       }
+
+ 

@@ -1,0 +1,42 @@
+    <h1>{{title}} {{myname}} living in {{city}}</h1>
+
+    <header id="header" class="header-scrolled">
+        <div class="container main-menu">
+          <div class="row align-items-center justify-content-between d-flex">
+            <div id="logo">
+              <a href="index.html"><img [src]="headerlogo" alt="" title="" width="200" ></a>
+            </div>
+            <nav id="nav-menu-container">
+              <ul class="nav-menu sf-js-enabled sf-arrows" style="touch-action: pan-y;">
+                    <li>
+                      <a routerLink='/dashboard' routerLinkActive='active'>Dashboard</a>
+                    </li>
+                    <li> <a routerLink="/login" routerLinkActive="active">Login Center</a>
+                    </li>
+                
+              </ul>
+            </nav><!-- #nav-menu-container -->		    		
+          </div>
+        </div>
+    </header>
+
+  <section class="mainArea row">
+    <div class='col-md-2'>
+        <div class='sliders'>
+          <div id="logo" [(class)]="cssClass">
+            <a href="index.html"><img [src]="logo" [class]="cssClass" alt="" title="" width="200"></a>
+          </div>
+          </div>
+    </div>
+       <div class="col-md-10">
+          <router-outlet></router-outlet>
+       </div> 
+      
+  </section>
+<footer>
+  <app-home-dashboard></app-home-dashboard>
+<p style="text-align:center;padding:0px;vertical-align:middle">This is secured product</p>
+</footer>
+
+ 
+ 

@@ -1,0 +1,20 @@
+.home ul{
+    margin:0px;
+    padding: 0px;
+    float: right;
+}
+.home ul li{
+  padding: 5px;
+  background: green;
+  display: inline;
+  margin: 5px;
+}
+
+a{
+    color: white;
+    cursor: pointer;
+}
+a:hover{
+    color: black;
+    text-decoration: none;
+}

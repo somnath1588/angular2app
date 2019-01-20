@@ -1,0 +1,17 @@
+<div class="col-md-push-1 col-md-11">
+    <h3> customer-dashboard Module separtely work from main app module works! </h3>
+<table class="table-responsive table table-striped">
+  <thead>
+    <tr>
+      <th>Username</th>
+      <th>Password</th>    
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor='let item of listDashboardUser'>
+      <td>{{item.name}}</td>
+      <td>{{item.password}}</td>
+    </tr>
+    </tbody>
+    </table>
+    </div>

@@ -1,0 +1,51 @@
+<div class="container col-md-push-1 col-md-11 formLogin">
+    <nav id="nav-menu-container">
+        <ul class="nav-menu sf-js-enabled sf-arrows" style="touch-action: pan-y;">
+              <li>
+                <a routerLink='/home' routerLinkActive='active'>Home</a>
+              </li>
+        </ul>
+</nav>
+    <h2> Login-dashboard Module separtely works! from main module. </h2>
+    {{User|json }}
+  <div *ngIf='submitted' method='POST' [ngClass]='{formSubmit:submitted}'>Form has been submitted ..</div>
+ 
+  <form  #Loginform="ngForm" (ngSubmit)='onSave(Loginform.value,Loginform)'>
+    <div class="form-group">
+      <label for="name">Name</label>
+      <input type="text" class="form-control" id="name" required
+      pattern="[a-zA-Z][a-zA-Z ]+"
+      [(ngModel)]="User.email" name="name"
+      #name="ngModel">
+      <div [hidden]="name.valid || name.pristine  || name.dirty"
+         class="alert alert-danger">
+         <div [hidden]="!name.hasError('required')">Name is required</div>
+         <div [hidden]="!name.hasError('pattern')">Only alphabets allowed</div>
+      </div>
+   </div>
+
+    <div class="form-group">
+      <label>Password</label>
+      <input type="password" required class='form-control' name='password'
+       #password="ngModel" minlength="8"
+        [(ngModel)]='User.password'> 
+        <div [hidden]="password.valid || password.pristine" class="alert alert-danger">
+            <div [hidden]="!password.hasError('minlength')">Password min 8 char</div>
+            <div [hidden]="!password.hasError('required')">Password is required</div>
+        </div>
+    </div>
+    <div class="form-group">{{Loginform.form.invalid}}
+      <input type="submit" class='btn btn-primary' [disabled]='!Loginform.form.valid' name='submit' value="submit"> 
+    </div>
+  </form>
+
+  
+</div>
+<div class="col-md-10" [hidden]='false'>
+  <input type='text' [value]='username' (input)='username=$event.target.value'>
+   {{username}}
+   <input type='text' [(ngModel)]='city' />
+   <button name='button' (click)='sendDatacity(city)' value='send city'>send city</button>
+  <br>
+</div>
+
